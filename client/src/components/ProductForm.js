@@ -19,21 +19,24 @@ const ProductForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmitHandler}>
-      <p>
-        <label>Product Name</label><br />
-        <input type="text" onChange={(e) => setProductName(e.target.value)} />
-      </p>
-      <p>
-        <label>Product Price</label><br />
-        <input type="text" onChange={(e) => setProductPrice(e.target.value)} />
-      </p>
-      <p>
-        <label>Product Description</label><br />
-        <input type="text" onChange={(e) => setProductDesc(e.target.value)} />
-      </p>
-      <input type="submit" value='Add Product' />
-    </form>
+    <div>
+      <h1>New Product:</h1>
+      <form onSubmit={onSubmitHandler}>
+        <p>
+          <label>Product Name</label><br />
+          <input type="text" onChange={(e) => setProductName(e.target.value)} />
+        </p>
+        <p>
+          <label>Product Price</label><br />
+          <input type="text" onChange={(e) => setProductPrice(e.target.value)} />
+        </p>
+        <p>
+          <label>Product Description</label><br />
+          <input type="text" onChange={(e) => setProductDesc(e.target.value)} />
+        </p>
+        <input type="submit" value='Add Product' />
+      </form>
+    </div>
   )
 }
 export default ProductForm;
