@@ -27,7 +27,6 @@ module.exports = {
         res.json(newProduct);
       })
       .catch((err) => {
-        console.log('this is where you are hitting a wall...')
         console.log(err);
       })
   },

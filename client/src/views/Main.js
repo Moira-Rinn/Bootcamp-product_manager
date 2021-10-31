@@ -14,18 +14,16 @@ const Main = () => {
         setLoaded(true);
       })
       .catch(err => console.log(err));
-  }, [productList]);
+  }, []);
 
-  const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/api/products/${id}`)
-      .then(res => console.log("item deleted."))
-      .catch(err => console.log(err));
+  const removeFromDom = productId => {
+    setProductList(productList.filter(product => product._id != productId));
   }
 
   return (
     <div>
       <ProductForm />
-      {loaded && <ProductList list={productList} deleteProduct={handleDelete} />}
+      {loaded && <ProductList list={productList} removeFromDom={removeFromDom} />}
     </div>
   )
 }

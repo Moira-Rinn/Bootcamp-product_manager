@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 const ProductForm = () => {
   const [productName, setProductName] = useState("");
@@ -15,7 +15,7 @@ const ProductForm = () => {
       productDesc
     })
       .then(res => console.log(res))
-      .catch(err => console.log("this is the...", err))
+      .catch(err => console.log("this is the...", err));
   }
 
   return (
